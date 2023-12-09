@@ -1,11 +1,9 @@
-import React from 'react'
-import IssueActions from './IssueActions'
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
-import { Table } from '@radix-ui/themes';
+import { Skeleton } from "@/app/components";
+import { Table } from "@radix-ui/themes";
+import IssueActions from "./IssueActions";
 
 const IssueLoadingPage = () => {
-    const issues = [1, 2, 3, 4, 5];
+  const issues = [1, 2, 3, 4, 5];
   return (
     <div>
       <IssueActions />
@@ -42,6 +40,6 @@ const IssueLoadingPage = () => {
       </Table.Root>
     </div>
   );
-}
+};
 
-export default IssueLoadingPage
+export default IssueLoadingPage;

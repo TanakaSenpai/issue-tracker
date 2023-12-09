@@ -1,6 +1,5 @@
-import React from 'react'
-import IssuesTable from './IssuesTable';
 import IssueActions from './IssueActions';
+import IssuesTable from './IssuesTable';
 
 
 const IssuesPage = async () => {
