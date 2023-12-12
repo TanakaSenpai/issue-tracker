@@ -1,9 +1,7 @@
-import IssueActions from './IssueActions';
-import IssuesTable from './IssuesTable';
-
+import IssueActions from "./IssueActions";
+import IssuesTable from "./IssuesTable";
 
 const IssuesPage = async () => {
-
   return (
     <div className="p-5">
       <IssueActions />
@@ -12,6 +10,6 @@ const IssuesPage = async () => {
       </div>
     </div>
   );
-}
+};
 
-export default IssuesPage
+export default IssuesPage;
