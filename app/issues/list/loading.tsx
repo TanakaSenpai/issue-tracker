@@ -1,9 +1,10 @@
-import { Skeleton } from "@/app/components";
-import { Table } from "@radix-ui/themes";
-import IssueActions from "./IssueActions";
+import { Skeleton } from '@/app/components';
+import { Table } from '@radix-ui/themes';
+import IssueActions from './IssueActions';
 
-const IssueLoadingPage = () => {
+const LoadingIssuesPage = () => {
   const issues = [1, 2, 3, 4, 5];
+
   return (
     <div>
       <IssueActions />
@@ -15,7 +16,7 @@ const IssueLoadingPage = () => {
               Status
             </Table.ColumnHeaderCell>
             <Table.ColumnHeaderCell className="hidden md:table-cell">
-              Created at
+              Created
             </Table.ColumnHeaderCell>
           </Table.Row>
         </Table.Header>
@@ -24,7 +25,7 @@ const IssueLoadingPage = () => {
             <Table.Row key={issue}>
               <Table.Cell>
                 <Skeleton />
-                <div className="md:hidden text-zinc-500 text-xs">
+                <div className="block md:hidden">
                   <Skeleton />
                 </div>
               </Table.Cell>
@@ -42,4 +43,4 @@ const IssueLoadingPage = () => {
   );
 };
 
-export default IssueLoadingPage;
+export default LoadingIssuesPage;

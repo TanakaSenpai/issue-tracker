@@ -3,19 +3,19 @@ import { Issue } from '@prisma/client';
 import { Card, Flex, Heading, Text } from '@radix-ui/themes';
 import ReactMarkdown from 'react-markdown';
 
-const IssueDetails = ({issue}: {issue: Issue}) => {
+const IssueDetails = ({ issue }: { issue: Issue }) => {
   return (
     <>
       <Heading>{issue.title}</Heading>
-      <Flex gap="3" my="2">
+      <Flex className="space-x-3" my="2">
         <IssueStatusBadge status={issue.status} />
-        <Text>{issue.created_at.toDateString()}</Text>
+        <Text>{issue.createdAt.toDateString()}</Text>
       </Flex>
-      <Card className="pros" mt="4">
+      <Card className="prose max-w-full" mt="4">
         <ReactMarkdown>{issue.description}</ReactMarkdown>
       </Card>
     </>
   );
-}
+};
 
-export default IssueDetails
+export default IssueDetails;
