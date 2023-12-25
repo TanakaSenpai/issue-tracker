@@ -7,7 +7,7 @@ import { Prisma } from '@prisma/client';
 
 const LatestIssues = async () => {
   const issues = await prisma.issue.findMany({
-    orderBy: { createdAt: Prisma.SortOrder.desc },
+    orderBy: { createdAt: Prisma.SortOrder.desc } as any,
     take: 5,
     include: {
       assignedToUser: true,
